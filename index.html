@@ -43,6 +43,19 @@ so to get .git file we should actually do
 
 git init:used to create a new git repo
 
+git remote add origin<https link>:
+    This is used while we are creating our project in our system and using terminal to set the full code in github.This is telling we are going to add in origin which is remote repo ie (github).
+    Basically we are intially telling the remote(github)is the origin and all the changes are pushed there
+   
+ git remote -v: used to verify remote:shows the fetch and push links (both will be same of github https link only)
+
+ git branch:used for checking the which branch we are in.(older version:* master)
+ Generally there is a default branch called as master which is different from main branch.Now we can create new branch named main and push all the contents or make the master branch as main by renaming.
+
+ git branch -M main:to rename the branch
+ git push -u origin main :used for telling (-u: set upstream) we are goint to commit in main branch only so -u prevents us from writing the same thing again now we can use just git push.
+
+
 
 
 
