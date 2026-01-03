@@ -49,15 +49,78 @@ git remote add origin<https link>:
    
  git remote -v: used to verify remote:shows the fetch and push links (both will be same of github https link only)
 
- git branch:used for checking the which branch we are in.(older version:* master)
+ git branch:used for checking the which branch we are in.(older version:* (the star tells which branch we are in )master)
  Generally there is a default branch called as master which is different from main branch.Now we can create new branch named main and push all the contents or make the master branch as main by renaming.
 
  git branch -M main:to rename the branch
  git push -u origin main :used for telling (-u: set upstream) we are goint to commit in main branch only so -u prevents us from writing the same thing again now we can use just git push.
 
+Preferred method:Creating the project on github and cloning on our local system is easy
 
+GIT BRANCHES:
 
+git branch:To verify which branch
+git branch -M main(modifiedname): To rename the branch 
+git checkout <branchname>: to navigate to that branch
+git checkout -b<new branchname>:to create new branch
+git branch -d<branch name> :to delete the branch 
+Note:We cannot delete the branch being on the same branch so first we should navigate to different branch then we can delete     
 
+Work flow:
 
+So there will be seperate branches as we saw and each team will be working on different features or ideas
+so this should be merged. 
+
+Way 1:
+git diff <branchname>:to compare commits, branches, files
+git merge< branch name>:To merge 2 branches
+
+Way 2:
+Create a PR:Pull Request on github
+This will have effect only on the github 
+git pull origin main:used to fetch and download content from a remote repo and immediately update the local repo to match the content
+
+Resolving merge conflicts:
+Git is not able to decide which changes to add when 2 or more branches make changes on the same line. 
+
+So either we can use the commands given or we can just remove the lines or add them both and the new one will be added in next line.Then use checkout and add,commit and push them
+
+Undoing changes:
+Case 1:Staged changes(ready to be committed)
+git reset<filename>
+git reset(for all)
+This will move back to unchanged stage just before add
+
+Case 2: Committed changes(for one commit)
+git reset HEAD~1; means it has been committed but that needs to be brought back to unchanged stage.
+
+This is like a linked list and the last code is latest and HEAD so by git reset HEAD~1; we are basically bringing the head to the previous unstaged position and the newest head (committed) will be deleted
+
+git log:Used to check all the logs(history) of what is happening. 
+q: is used for quitting from the particular command
+
+Case 3:Committed changes (for many commits)
+git reset<commit hash>
+git reset --hard<commit hash(hashcode)>
+
+So in this the head should be moved to backwards so the hash of the changes are used(that can be fetched using git log)
+
+git reset --hard<hashcode>: used for deleting the content in vs code also or any code editor
+
+Fork:
+used to create a new repository that shares code and visibility settings with the original upstream repository.
+
+In simple words if we want to copy the code of another git file we use fork.
+Fork is a rough copy. In companies the bugs of another developers are fixed so we need a copy of the developer's code so we fork it.
+
+Fork is a copy of a repository made on GitHub so that we can work on someone else’s code without affecting the original repository. It is mainly used when we do not have write access, such as in open-source projects.
+
+origin
+
+Points to your fork
+
+upstream
+
+(Optional) points to the original repository
 -->
 <p>Hello</p>
